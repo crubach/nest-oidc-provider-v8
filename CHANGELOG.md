@@ -1,3 +1,11 @@
+# [2.0.0](https://github.com/crubach/nest-oidc-provider) (2024-04-15)
+
+### Features
+
+* Merge suggested v8.x compatibility changes
+* Upgrade to Nodev20 and latest dependencies
+* Update example code
+
 # [1.1.0](https://github.com/adrianbrs/nest-oidc-provider/compare/1.0.7...1.1.0) (2022-09-22)
 
 
