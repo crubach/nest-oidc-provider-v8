@@ -1,4 +1,4 @@
-# [2.0.0](https://github.com/crubach/nest-oidc-provider) (2024-04-15)
+# [2.0.0](https://github.com/crubach/nest-oidc-provider-v8) (2024-04-15)
 
 ### Features
 

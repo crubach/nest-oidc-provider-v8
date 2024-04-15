@@ -5,13 +5,13 @@
   "author": "Adrian Cerbaro <adriancerbaro@gmail.com>",
   "license": "MIT",
   "private": false,
-  "homepage": "https://github.com/adrianbrs/nest-oidc-provider#readme",
+  "homepage": "https://github.com/crubach/nest-oidc-provider-v8#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adrianbrs/nest-oidc-provider"
+    "url": "git+https://github.com/crubach/nest-oidc-provider-v8.git"
   },
   "bugs": {
-    "url": "https://github.com/adrianbrs/nest-oidc-provider/issues"
+    "url": "https://github.com/crubach/nest-oidc-provider-v8/issues"
   },
   "keywords": [
     "nestjs",
