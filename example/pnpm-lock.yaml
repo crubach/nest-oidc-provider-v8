@@ -4462,7 +4462,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /nest-oidc-provider@2.0.0-next.2(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(reflect-metadata@0.1.14):
+  /nest-oidc-provider@2.0.1-next.2(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(reflect-metadata@0.1.14):
     resolution: {integrity: sha512-Nyp1vKbpecjHtdTjCh3j4rSJ7IXWO1PH9seXnztoT7DpZQHivQIE6uGfGeJcW3hA1Q+XhvxRzGgCPYAjwk39Sw==}
     engines: {node: ^18.19.1 || ^20.11.1}
     peerDependencies:
