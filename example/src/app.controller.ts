@@ -7,10 +7,9 @@ import {
   Render,
   Res,
 } from '@nestjs/common';
-import { Response } from 'express';
-import { KoaContextWithOIDC, OidcContext } from 'nest-oidc-provider';
 import axios from 'axios';
-import qs from 'query-string';
+import { Response } from 'express';
+import { KoaContextWithOIDC, OidcContext } from 'nest-oidc-provider-v8';
 
 @Controller()
 export class AppController {
@@ -57,6 +56,8 @@ export class AppController {
     }
 
     try {
+      const qs = (await import('query-string')).default;
+
       const result = await axios.post(
         'http://localhost:3001/oidc/token',
         qs.stringify({

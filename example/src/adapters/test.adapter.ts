@@ -1,5 +1,5 @@
+import { Adapter, AdapterPayload } from 'nest-oidc-provider-v8';
 import { DatabaseService } from '../database/database.service';
-import { Adapter, AdapterPayload } from 'nest-oidc-provider';
 
 export class TestAdapter implements Adapter {
   constructor(public modelName: string, public dbService: DatabaseService) {}

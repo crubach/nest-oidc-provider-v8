@@ -1,4 +1,4 @@
-# nest-oidc-provider (example app)
+# nest-oidc-provider-v8 (example app)
 ## Start
 
 ```bash

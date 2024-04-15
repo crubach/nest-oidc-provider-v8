@@ -7,13 +7,13 @@ import {
   Post,
   Res,
 } from '@nestjs/common';
+import { Response } from 'express';
 import {
   InjectOidcProvider,
   InteractionHelper,
   OidcInteraction,
   Provider,
-} from 'nest-oidc-provider';
-import { Response } from 'express';
+} from 'nest-oidc-provider-v8';
 
 /**
  * !!! This is just for example, don't use this in any real case !!!

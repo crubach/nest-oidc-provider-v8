@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import LRU from 'lru-cache';
+import { LRUCache } from 'lru-cache';
 
 @Injectable()
 export class DatabaseService {
-  private readonly storage = new LRU({ max: 1000 });
+  private readonly storage = new LRUCache({ max: 1000 });
   private readonly grantable = new Set([
     'AccessToken',
     'AuthorizationCode',
@@ -38,7 +38,7 @@ export class DatabaseService {
     const { grantId, userCode, uid } = payload;
 
     if (model === 'Session') {
-      this.storage.set(this.sessionUidKeyFor(uid), id, expiresIn * 1000);
+      this.storage.set(this.sessionUidKeyFor(uid), {ttl: expiresIn * 1000});
     }
 
     if (this.grantable.has(model) && grantId) {
@@ -53,15 +53,15 @@ export class DatabaseService {
     }
 
     if (userCode) {
-      this.storage.set(this.userCodeKeyFor(userCode), id, expiresIn * 1000);
+      this.storage.set(this.userCodeKeyFor(userCode), id, {ttl: expiresIn * 1000});
     }
 
-    this.storage.set(key, payload, expiresIn * 1000);
+    this.storage.set(key, payload, {ttl: expiresIn * 1000});
   }
 
   delete(model: string, id: string) {
     const key = this.key(model, id);
-    this.storage.del(key);
+    this.storage.delete(key);
   }
 
   consume(model: string, id: string) {
@@ -86,8 +86,8 @@ export class DatabaseService {
     const grantKey = this.grantKeyFor(grantId);
     const grant = this.storage.get(grantKey) as any[];
     if (grant) {
-      grant.forEach((token) => this.storage.del(token));
-      this.storage.del(grantKey);
+      grant.forEach((token) => this.storage.delete(token));
+      this.storage.delete(grantKey);
     }
   }
 }

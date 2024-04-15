@@ -1,7 +1,7 @@
-# nest-oidc-provider
+# nest-oidc-provider-v8
 
-[![NPM Version](https://img.shields.io/npm/v/nest-oidc-provider.svg)](https://www.npmjs.com/package/nest-oidc-provider)
-[![npm](https://img.shields.io/npm/dw/nest-oidc-provider)](https://www.npmjs.com/package/nest-oidc-provider)
+[![NPM Version](https://img.shields.io/npm/v/nest-oidc-provider.svg)](https://www.npmjs.com/package/nest-oidc-provider-v8)
+[![npm](https://img.shields.io/npm/dw/nest-oidc-provider)](https://www.npmjs.com/package/nest-oidc-provider-v8)
 [![NPM License](https://img.shields.io/npm/l/nest-oidc-provider)](https://github.com/adrianbrs/nest-oidc-provider/blob/main/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/adrianbrs/nest-oidc-provider/badge.svg?branch=main)](https://coveralls.io/github/adrianbrs/nest-oidc-provider?branch=main)
 [![Continuous Integration](https://github.com/adrianbrs/nest-oidc-provider/actions/workflows/test.yml/badge.svg)](https://github.com/adrianbrs/nest-oidc-provider/actions/workflows/test.yml)
@@ -13,19 +13,19 @@
 ## Installation
 
 ```bash
-$ npm i --save nest-oidc-provider oidc-provider
+$ npm i --save nest-oidc-provider-v8 oidc-provider
 ```
 
 OR
 
 ```bash
-$ yarn add nest-oidc-provider oidc-provider
+$ yarn add nest-oidc-provider-v8 oidc-provider
 ```
 
 OR
 
 ```bash
-$ pnpm add nest-oidc-provider oidc-provider
+$ pnpm add nest-oidc-provider-v8 oidc-provider
 ```
 
 ## Setup
@@ -134,7 +134,7 @@ export class AppModule {}
 Note that in this example, the `OidcConfigService` has to implement the `OidcModuleOptionsFactory` interface, as shown below.
 
 ```ts
-import type { OidcModuleOptionsFactory } from 'nest-oidc-provider';
+import type { OidcModuleOptionsFactory } from 'nest-oidc-provider-v8';
 
 @Injectable()
 export class OidcConfigService implements OidcModuleOptionsFactory {
@@ -180,7 +180,7 @@ import {
   InjectOidcProvider,
   type Provider,
   type ProviderModule,
-} from 'nest-oidc-provider';
+} from 'nest-oidc-provider-v8';
 
 @Controller('/some-controller')
 export class SomeController {
@@ -221,7 +221,7 @@ async function bootstrap() {
 Returns an instance of `InteractionHelper` class.
 
 ```ts
-import { OidcInteraction, type InteractionHelper } from 'nest-oidc-provider';
+import { OidcInteraction, type InteractionHelper } from 'nest-oidc-provider-v8';
 
 @Get(':uid')
 @Render('login')
@@ -259,7 +259,7 @@ interface InteractionHelper {
 Returns an instance of `KoaContextWithOIDC`.
 
 ```ts
-import { OidcContext, type KoaContextWithOIDC } from 'nest-oidc-provider';
+import { OidcContext, type KoaContextWithOIDC } from 'nest-oidc-provider-v8';
 
 @Get()
 async index(@OidcContext() ctx: KoaContextWithOIDC) {
